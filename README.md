@@ -22,6 +22,10 @@ Bookstore setup using react-redux.
 * Run `npm install` in your terminal to install all dependencies (you will need Node.js installed on your machine); 
 * Run `npm start`; 
 
+### Deployment
+
+This is the Live version of the application [Heroku](https://magic-book-bookstore.herokuapp.com/).
+
 ## Authors
 
 👤 **Mih Frederick**
