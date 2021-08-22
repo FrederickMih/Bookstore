@@ -1,9 +1,12 @@
+import '../containers/BooksList';
+import '../containers/BooksForm';
 import '../App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">BookStore Setup</header>
+      <BooksList />
+      <BooksForm />
     </div>
   );
 }
