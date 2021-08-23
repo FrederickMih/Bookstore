@@ -12,20 +12,20 @@ const initState = [
     category: 'Sci-Fi',
   },
   {
-    id: new Date().getTime().toString(),
+    id: Math.random() * 10,
     title: 'titleTwo',
     category: 'Action',
   },
   {
-    id: new Date().getTime().toString(),
+    id: Math.random() * 10,
     title: 'titleThree',
     category: 'Biography',
   },
   {
-    id: new Date().getTime().toString(),
+    id: Math.random() * 10,
     title: 'titleFour',
-    category: 'Kids'
-  }
+    category: 'Kids',
+  },
 ];
 
 const store = createStore(booksReducers, initState);
@@ -36,5 +36,5 @@ ReactDOM.render(
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

@@ -3,7 +3,7 @@ import removeBook from './removeBook';
 
 const combineActions = {
   createBook,
-  removeBook
+  removeBook,
 };
 
 export default combineActions;

@@ -8,7 +8,7 @@ const BooksForm = () => {
     'Horror',
     'Kids',
     'Learning',
-    'Sci-Fi'
+    'Sci-Fi',
   ];
 
   return (
@@ -17,7 +17,7 @@ const BooksForm = () => {
         <input type="text" id="title" placeholder="title here" />
         <select name="category">
           {categories.forEach((item) => (
-            <option>{item}</option>
+            <option key={Math.random() * 1000}>{item}</option>
           ))}
         </select>
         <button type="submit">Submit for</button>

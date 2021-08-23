@@ -1,5 +1,5 @@
-import '../containers/BooksList';
-import '../containers/BooksForm';
+import BooksList from '../containers/BooksList';
+import BooksForm from '../containers/BooksForm';
 import '../App.css';
 
 function App() {
