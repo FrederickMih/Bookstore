@@ -1,5 +1,5 @@
 import * as myConst from '../constants';
-// functions responsible for actions on Books
+
 const booksReducers = (state, action) => {
   switch (action.type) {
     case myConst.CREATE_BOOK:
