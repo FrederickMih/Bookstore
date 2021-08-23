@@ -1,7 +1,7 @@
-const REMOVE_BOOK = 'REMOVE_BOOK';
+import * as myConst from '../constants';
 
 const removeBook = (book) => ({
-  type: REMOVE_BOOK,
+  type: myConst.REMOVE_BOOK,
   payload: book
 });
 

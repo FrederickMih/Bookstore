@@ -1,6 +1,7 @@
-const CREATE_BOOK = 'CREATE_BOOK';
+import * as myConst from '../constants';
+
 const createBook = (book) => ({
-  type: CREATE_BOOK,
+  type: myConst.CREATE_BOOK,
   payload: book
 });
 
