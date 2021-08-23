@@ -14,7 +14,12 @@ const BooksForm = () => {
     'Sci-Fi',
   ];
   const handleChange = (e) => {
+    e.preventDefault();
     setTitle(e.target.value);
+  };
+  const handleOptionChange = (e) => {
+    e.preventDefault();
+    setcategory(e.target.value);
   };
   const submitForm = (e) => {
     e.preventDefault();
@@ -30,7 +35,7 @@ const BooksForm = () => {
           onChange={handleChange}
           value={title}
         />
-        <select name="category">
+        <select name="category" value={category} onChange={handleOptionChange}>
           {categories.forEach((item) => (
             <option key={Math.random() * 1000}>{item}</option>
           ))}
