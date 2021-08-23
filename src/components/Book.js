@@ -18,7 +18,7 @@ Book.propTypes = {
   book: PropTypes.InstanceOf(Object).isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
