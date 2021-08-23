@@ -2,11 +2,13 @@ import React from 'react';
 
 const BooksForm = () => {
   const categories = [
-    'Mathematics',
-    'Physics',
-    'Chemistry',
+    'Action',
+    'Biography',
     'History',
-    'English'
+    'Horror',
+    'Kids',
+    'Learning',
+    'Sci-Fi'
   ];
 
   return (
