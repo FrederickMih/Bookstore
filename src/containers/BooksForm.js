@@ -13,11 +13,23 @@ const BooksForm = () => {
     'Learning',
     'Sci-Fi',
   ];
+  const handleChange = (e) => {
+    setTitle(e.target.value);
+  };
+  const submitForm = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
-      <form action="">
-        <input type="text" id="title" placeholder="title here" />
+      <form action="" onSubmit={submitForm}>
+        <input
+          type="text"
+          id="title"
+          placeholder="title here"
+          onChange={handleChange}
+          value={title}
+        />
         <select name="category">
           {categories.forEach((item) => (
             <option key={Math.random() * 1000}>{item}</option>
