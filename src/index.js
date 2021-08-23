@@ -28,7 +28,7 @@ const initState = [
   }
 ];
 
-
+const store = createStore(booksReducers, initState);
 
 ReactDOM.render(
   <React.StrictMode>
