@@ -1,6 +1,9 @@
 import React from 'react';
 
 const BooksForm = () => {
+  const [title, setTitle] = useState('');
+  const [category, setcategory] = useState('action');
+  const dispatch = useDispatch();
   const categories = [
     'Action',
     'Biography',
