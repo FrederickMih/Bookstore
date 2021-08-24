@@ -1,8 +1,10 @@
-import React from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import * as myConst from '../constants';
 
 const BooksForm = () => {
   const [title, setTitle] = useState('');
-  const [category, setcategory] = useState('action');
+  const [category, setCategory] = useState('category');
   const dispatch = useDispatch();
   const categories = [
     'Action',
@@ -14,20 +16,22 @@ const BooksForm = () => {
     'Sci-Fi',
   ];
   const handleChange = (e) => {
-    e.preventDefault();
     setTitle(e.target.value);
   };
   const handleOptionChange = (e) => {
-    e.preventDefault();
-    setcategory(e.target.value);
+    setCategory(e.target.value);
   };
-  const submitForm = (e) => {
+  const handleSubmitForm = (e) => {
     e.preventDefault();
+    const book = { id: Math.floor(Math.random() * 1000), title, category };
+    dispatch({ type: myConst.CREATE_BOOK, book });
+    setCategory('category');
+    setTitle('');
   };
 
   return (
     <>
-      <form action="" onSubmit={submitForm}>
+      <form action="" onSubmit={handleSubmitForm}>
         <input
           type="text"
           id="title"
@@ -40,7 +44,7 @@ const BooksForm = () => {
             <option key={Math.random() * 1000}>{item}</option>
           ))}
         </select>
-        <button type="submit">Submit for</button>
+        <button type="submit">Submit</button>
       </form>
     </>
   );
