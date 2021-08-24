@@ -1,8 +1,8 @@
 import * as myConst from '../constants';
 
-const createFilter = (filter) => ({
+const changeFilter = (filter) => ({
   type: myConst.CHANGE_FILTER,
   payload: filter,
 });
 
-export default createFilter;
+export default changeFilter;
