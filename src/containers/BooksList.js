@@ -2,16 +2,24 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
 import * as myConst from '../constants';
+import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = () => {
   const books = useSelector((state) => state);
+  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
+  let filterBooks = books;
+  if (filter !== 'All') {
+    filterBooks = books.filter((thisBook) => thisBook.category === filter);
+  }
+
   const handleRemoveBook = (book) => {
     dispatch({ type: myConst.REMOVE_BOOK, book });
   };
 
   return (
     <div>
+      <CategoryFilter />
       <table>
         <thead>
           <tr>
@@ -22,7 +30,7 @@ const BooksList = () => {
           </tr>
         </thead>
         <tbody>
-          {books.map((mybook) => (
+          {filterBooks && filterBooks.map((mybook) => (
             <Book
               key={mybook.id}
               book={mybook}

@@ -1,4 +1,3 @@
-import { option } from 'jest-validate/node_modules/@types/yargs';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import * as myConst from '../constants';
@@ -8,9 +7,9 @@ const CategoryFilter = () => {
   const dispatch = useDispatch();
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
+    const filter = e.target.value;
+    dispatch({ type: myConst.CHANGE_FILTER, filter });
   };
-
-  dispatch({ type: myConst.CHANGE_FILTER, filter });
 
   const categories = [
     'All',
