@@ -30,13 +30,14 @@ const BooksList = () => {
           </tr>
         </thead>
         <tbody>
-          {filterBooks && filterBooks.map((mybook) => (
-            <Book
-              key={mybook.id}
-              book={mybook}
-              onClick={() => handleRemoveBook(mybook)}
-            />
-          ))}
+          {filterBooks
+            && filterBooks.map((mybook) => (
+              <Book
+                key={mybook.id}
+                book={mybook}
+                onClick={() => handleRemoveBook(mybook)}
+              />
+            ))}
         </tbody>
       </table>
     </div>

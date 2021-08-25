@@ -3,13 +3,8 @@ import { useDispatch } from 'react-redux';
 import * as myConst from '../constants';
 
 const CategoryFilter = () => {
-  const { filter, setFilter } = useState('All');
+  const [filter, setFilter] = useState('All');
   const dispatch = useDispatch();
-  const handleFilterChange = (e) => {
-    setFilter(e.target.value);
-    const filter = e.target.value;
-    dispatch({ type: myConst.CHANGE_FILTER, filter });
-  };
 
   const categories = [
     'All',
@@ -22,12 +17,16 @@ const CategoryFilter = () => {
     'Sci-Fi',
   ];
 
+  const handleFilterChange = (e) => {
+    setFilter(e.target.value);
+    const filter = e.target.value;
+    dispatch({ type: myConst.CHANGE_FILTER, filter });
+  };
+
   return (
     <div>
-      <select value={filter} onChange={(e) => handleFilterChange(e)}>
-        {categories.map((catItems) => (
-          <option key={Math.random() * 1000}>{catItems}</option>
-        ))}
+      <select onChange={(e) => handleFilterChange(e)} value={filter}>
+        {categories.map((catItems) => <option key={Math.random() * 1000}>{catItems}</option>)}
       </select>
     </div>
   );
