@@ -1,7 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import * as myConst from '../constants';
 
-const CategoryFilter = ({ handleFilterChange }) => {
+const CategoryFilter = () => {
+  const [filter, setFilter] = useState('All');
+  const dispatch = useDispatch();
+
   const categories = [
     'All',
     'Action',
@@ -13,19 +17,23 @@ const CategoryFilter = ({ handleFilterChange }) => {
     'Sci-Fi',
   ];
 
-  return (
-    <select onChange={handleFilterChange} name="filter">
-      {categories.map((category) => (
-        <option key={category} value={category}>
-          {category}
-        </option>
-      ))}
-    </select>
-  );
-};
+  const handleFilterChange = (e) => {
+    setFilter(e.target.value);
+    const filter = e.target.value;
+    dispatch({ type: myConst.CHANGE_FILTER, filter });
+  };
 
-CategoryFilter.propTypes = {
-  handleFilterChange: PropTypes.func.isRequired,
+  return (
+    <div className="categories-div">
+      <select onChange={handleFilterChange} name="filter" id="categories" className="categories-select" value={filter}>
+        {categories.map((category) => (
+          <option key={category} value="All">
+            CATEGORIES
+          </option>
+        ))}
+      </select>
+    </div>
+  );
 };
 
 export default CategoryFilter;
