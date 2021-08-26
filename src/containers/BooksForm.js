@@ -3,50 +3,44 @@ import { useDispatch } from 'react-redux';
 import * as myConst from '../constants';
 
 const BooksForm = () => {
-  const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
-  const categories = [
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi',
-  ];
-  const handleChange = (e) => {
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('Action');
+  const [error, setError] = useState('');
+
+  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+
+  const handleInputChange = (e) => {
     setTitle(e.target.value);
   };
-  const handleOptionChange = (e) => {
+
+  const handleSelectChange = (e) => {
     setCategory(e.target.value);
   };
-  const handleSubmitForm = (e) => {
-    e.preventDefault(); // prevent browser reload/refresh.
-    const book = { id: Math.floor(Math.random() * 1000), title, category };
-    dispatch({ type: myConst.CREATE_BOOK, book });
-    setCategory(''); // resetting category state
-    setTitle(''); // resetting title state
+
+  const handleOptionChange = (e) => {
+    e.preventDefault();
+    if (title !== '') {
+      const book = { id: Math.ceil(Math.random() * 1000), title, category };
+      dispatch({ type: myConst.CREATE_BOOK, book });
+      setCategory('Action');
+      setTitle('');
+      setError('');
+    } else {
+      setError('Please enter a title');
+    }
   };
 
   return (
-    <>
-      <form action="" onSubmit={handleSubmitForm}>
-        <input
-          type="text"
-          id="title"
-          placeholder="title here"
-          onChange={handleChange}
-          value={title}
-        />
-        <select name="category" value={category} onChange={handleOptionChange}>
-          {categories.map((item) => (
-            <option key={Math.random() * 1000}>{item}</option>
-          ))}
-        </select>
-        <button type="submit">Submit</button>
-      </form>
-    </>
+    <form onSubmit={handleOptionChange}>
+      <input type="text" id="title" placeholder="enter title" onChange={handleInputChange} value={title} />
+      <select onChange={handleSelectChange} value={category}>
+        {categories.map((cat) => <option key={Math.random() * 10}>{cat}</option>)}
+
+      </select>
+      <button type="submit">Submit</button>
+      <p>{error}</p>
+    </form>
   );
 };
 

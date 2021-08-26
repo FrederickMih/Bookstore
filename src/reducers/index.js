@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import booksReducers from './books';
+import books from './books';
 import filter from './filter';
 
 const rootReducer = combineReducers({
-  booksReducers,
+  books,
   filter,
 });
 

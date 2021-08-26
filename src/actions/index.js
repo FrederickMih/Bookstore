@@ -2,10 +2,10 @@ import createBook from './createBook';
 import removeBook from './removeBook';
 import changeFilter from './changeFilter';
 
-const combineActions = {
+const combinedActions = () => ({
   createBook,
   removeBook,
   changeFilter,
-};
+});
 
-export default combineActions;
+export default combinedActions;

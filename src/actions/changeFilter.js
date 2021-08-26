@@ -1,8 +1,8 @@
 import * as myConst from '../constants';
 
-const changeFilter = (filter) => ({
+const changeFilter = (category) => ({
   type: myConst.CHANGE_FILTER,
-  payload: filter,
+  category,
 });
 
 export default changeFilter;
