@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import changeFilter from '../actions/index';
 import * as myConst from '../constants';
 
 function BooksList() {
@@ -16,10 +17,14 @@ function BooksList() {
     dispatch({ type: myConst.REMOVE_BOOK, book });
   };
 
+  const handleFilterChange = (e) => {
+    dispatch(changeFilter(e.target.value));
+  };
+
   return (
     <>
 
-      <CategoryFilter />
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
         <thead>
           <tr>
