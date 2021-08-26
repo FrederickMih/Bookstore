@@ -1,10 +1,14 @@
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
+import NavigationBar from './NavigationBar';
 
 const App = () => (
   <>
-    <BooksList />
-    <BooksForm />
+    <div className="app-div">
+      <NavigationBar />
+      <BooksList />
+      <BooksForm />
+    </div>
   </>
 );
 
