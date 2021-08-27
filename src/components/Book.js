@@ -18,7 +18,7 @@ const Book = ({ book, handleDeleteBook }) => {
         <div className="left">
           <p className="category">{category}</p>
           <h3 className="title">{title}</h3>
-          <p className="author">Suzanne Collins</p>
+          <p className="author">fred Mih</p>
           <div className="action-buttons">
             <button type="button" className="item-link" onClick={handleCommentsClick}>Comments</button>
             <button type="button" className="item-link remove" onClick={handleDeleteBook}>Remove</button>
@@ -26,7 +26,7 @@ const Book = ({ book, handleDeleteBook }) => {
         </div>
         <div className="right">
           <p className="current right-element">Current Chapter</p>
-          <p className="chapter right-element">Chapter 17</p>
+          <p className="chapter right-element">Book chap</p>
           <button className="right-element btn btn-primary chapter-btn" type="button">UPDATE PROGRESS</button>
 
         </div>

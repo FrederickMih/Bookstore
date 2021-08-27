@@ -1,0 +1,13 @@
+.item {
+  width: 70%;
+  padding: 5rem;
+  height: 10.625rem;
+  margin: 2.313rem auto 0;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
