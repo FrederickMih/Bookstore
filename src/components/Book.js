@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import Comments from './Comments';
 import '../styles/book.css';
+import '../App.css';
 
 const Book = ({ book, handleDeleteBook }) => {
   const { title, category } = book;
