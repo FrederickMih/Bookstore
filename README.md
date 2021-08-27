@@ -23,7 +23,7 @@ Bookstore app for management and organisation of your books.
 * Run `npm start`; 
 # How The Application looks
 
-![](src/images/Bookstore.png) 
+![](src/images/bookstore2.png) 
 
 ### Deployment
 
