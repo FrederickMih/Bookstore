@@ -27,7 +27,7 @@ const Book = ({ book, handleDeleteBook }) => {
         <div className="left">
           <p className="category">{category}</p>
           <h3 className="title">{title}</h3>
-          <p className="author">fred Mih</p>
+          <p className="author">Mih Frederick</p>
           <div className="action-buttons">
             <button type="button" className="item-link" onClick={handleCommentsClick}>Comments</button>
             <button type="button" className="item-link remove" onClick={handleDeleteBook}>Remove</button>

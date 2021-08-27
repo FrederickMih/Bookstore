@@ -19,7 +19,7 @@ function Comments({ toggleComments }) {
         <form onSubmit={handleFormSubmit}>
           <input type="text" className="form-control comments-input" placeholder="enter your comment..." onChange={handleInputChange} value={comment} />
           <button className="btn btn-primary btn-sm" type="submit">Post</button>
-          {comments.map((comm) => <li key={Math.random() * 1000}>{comm}</li>)}
+          {comments.map((com) => <li key={Math.random() * 1000}>{com}</li>)}
 
         </form>
       </div>

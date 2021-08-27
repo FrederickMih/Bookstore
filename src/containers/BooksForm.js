@@ -43,8 +43,8 @@ const BooksForm = () => {
 
         </select>
         <button className="submit btn btn-primary chapter-btn" type="submit">Add Book</button>
-        <p className="error-p">{error}</p>
       </form>
+      <p className="error-p">{error}</p>
     </div>
   );
 };
