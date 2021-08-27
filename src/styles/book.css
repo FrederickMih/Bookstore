@@ -47,7 +47,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: #53a3e9;
   margin-bottom: 1.5rem;
 }
 
@@ -63,7 +63,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: #53a3e9;
   text-decoration: none;
 }
 
@@ -127,4 +127,8 @@
 
 .right-element {
   margin-top: 1rem;
+}
+
+.btn-primary{
+  background-color: #0290ff;
 }
