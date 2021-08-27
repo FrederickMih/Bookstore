@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import { CircularProgress } from '@material-ui/core';
 import Comments from './Comments';
 import '../styles/book.css';
 import EditBookForm from '../containers/EditBookForm';
+import '../styles/Comments.css';
 import '../App.css';
 
 const Book = ({ book, handleDeleteBook }) => {
   const { title, category } = book;
   const [toggleShow, setToggleShow] = useState(false);
+  const progress = Math.floor(Math.random() * 100);
 
   const [toggleComments, setToggleComments] = useState(false);
 
@@ -32,9 +35,17 @@ const Book = ({ book, handleDeleteBook }) => {
             <button type="button" className="item-link remove" onClick={handleEditClick}>Edit</button>
           </div>
         </div>
+        <div className="middle">
+          <CircularProgress variant="determinate" value={progress} />
+          {progress}
+          %
+          <br />
+          {' '}
+          Completed
+        </div>
         <div className="right">
           <p className="current right-element">Current Chapter</p>
-          <p className="chapter right-element">Book chap</p>
+          <p className="chapter right-element">Chapter 20</p>
           <button className="right-element btn btn-primary chapter-btn" type="button">UPDATE PROGRESS</button>
 
         </div>
