@@ -21,14 +21,13 @@ Bookstore app for management and organisation of your books.
 * Switch to the main directory of project using cd; 
 * Run `npm install` in your terminal to install all dependencies (you will need Node.js installed on your machine); 
 * Run `npm start`; 
-
 # How The Application looks
 
 ![](src/images/Bookstore.png) 
 
 ### Deployment
 
-This is the Live version of the application [Heroku](https://magic-book-bookstore.herokuapp.com/).
+This is the Live version of the application [Heroku](https://fred-magic-bookstore.herokuapp.com/).
 
 ## Authors
 
