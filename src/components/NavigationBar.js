@@ -1,5 +1,6 @@
 import React from 'react';
 import CategoryFilter from './CategoryFilter';
+import '../styles/NavigationBar.css';
 
 const NavigationBar = () => (
   <nav className="nav-bar" id="navbar">
