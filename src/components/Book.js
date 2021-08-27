@@ -2,15 +2,21 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import Comments from './Comments';
 import '../styles/book.css';
+import EditBookForm from '../containers/EditBookForm';
 import '../App.css';
 
 const Book = ({ book, handleDeleteBook }) => {
   const { title, category } = book;
+  const [toggleShow, setToggleShow] = useState(false);
 
   const [toggleComments, setToggleComments] = useState(false);
 
   const handleCommentsClick = () => {
     setToggleComments(!toggleComments);
+  };
+
+  const handleEditClick = () => {
+    setToggleShow(!toggleShow);
   };
 
   return (
@@ -23,6 +29,7 @@ const Book = ({ book, handleDeleteBook }) => {
           <div className="action-buttons">
             <button type="button" className="item-link" onClick={handleCommentsClick}>Comments</button>
             <button type="button" className="item-link remove" onClick={handleDeleteBook}>Remove</button>
+            <button type="button" className="item-link remove" onClick={handleEditClick}>Edit</button>
           </div>
         </div>
         <div className="right">
@@ -33,6 +40,7 @@ const Book = ({ book, handleDeleteBook }) => {
         </div>
 
       </div>
+      <EditBookForm book={book} toggleShow={toggleShow} setToggleShow={setToggleShow} />
       <Comments setToggleComments={setToggleComments} toggleComments={toggleComments} />
     </>
   );
