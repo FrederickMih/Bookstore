@@ -5,7 +5,6 @@ import Comments from './Comments';
 import '../styles/book.css';
 import EditBookForm from '../containers/EditBookForm';
 import '../styles/Comments.css';
-import '../App.css';
 
 const Book = ({ book, handleDeleteBook }) => {
   const { title, category } = book;

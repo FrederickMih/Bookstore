@@ -18,12 +18,10 @@ function BooksList() {
   return (
     <>
 
-      <tbody>
-        {filteredBooks.map((book) => (
-          <Book key={book.id} book={book} handleDeleteBook={() => handleDeleteBook(book)} />
+      {filteredBooks.map((book) => (
+        <Book key={book.id} book={book} handleDeleteBook={() => handleDeleteBook(book)} />
 
-        ))}
-      </tbody>
+      ))}
 
     </>
   );

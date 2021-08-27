@@ -34,8 +34,9 @@ const BooksForm = () => {
 
   return (
     <div className="form-div">
+      <hr />
       <h3 className="form-title">Add New Book</h3>
-      <form onSubmit={handleOptionChange}>
+      <form onSubmit={handleOptionChange} className="form">
         <input className="title-input form-control" type="text" id="title" placeholder="Book title" onChange={handleInputChange} value={title} />
         <select className="form-select" onChange={handleSelectChange} value={category} placeholder="Category">
           {categories.map((mycat) => <option key={Math.random() * 10}>{mycat}</option>)}
