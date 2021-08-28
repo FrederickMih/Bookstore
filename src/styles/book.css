@@ -89,7 +89,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #121212;
-  margin-right: 5.5rem;
+  margin-right: 3.5rem;
   margin-bottom: 2rem;
 }
 
@@ -101,7 +101,7 @@
   line-height: normal;
   letter-spacing: -0.4px;
   color: black;
-  margin-right: 7rem;
+  margin-right: 5rem;
   position: absolute;
   margin-bottom: 2rem;
 }
@@ -137,5 +137,5 @@
 
 .btn-primary {
   background-color: #0290ff;
-  width: 12rem;
+  width: 10rem;
 }
