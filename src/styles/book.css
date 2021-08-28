@@ -89,6 +89,8 @@
   line-height: normal;
   letter-spacing: normal;
   color: #121212;
+  margin-right: 5.5rem;
+  margin-bottom: 2rem;
 }
 
 .chapter {
@@ -99,6 +101,9 @@
   line-height: normal;
   letter-spacing: -0.4px;
   color: black;
+  margin-right: 7rem;
+  position: absolute;
+  margin-bottom: 2rem;
 }
 
 .chapter-btn {
@@ -128,13 +133,9 @@
 
 .right-element {
   margin-top: 1rem;
+ 
 }
-
 .btn-primary {
   background-color: #0290ff;
+  width: 12rem;
 }
-
-/* .percent-div {
-  margin-left: 5rem;
-  margin-bottom: 6rem;
-} */

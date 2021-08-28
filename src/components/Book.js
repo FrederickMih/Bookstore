@@ -48,8 +48,8 @@ const Book = ({ book, handleDeleteBook }) => {
           </div>
         </div>
         <div className="right">
-          <p className="current right-element">Current Chapter</p>
-          <p className="chapter right-element">Chapter 20</p>
+          <p className="current right-element ">Current Chapter</p>
+          <p className="chapter right-element ">Chapter 20</p>
           <button className="right-element btn btn-primary chapter-btn" type="button">UPDATE PROGRESS</button>
 
         </div>
