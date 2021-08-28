@@ -74,7 +74,8 @@
 }
 
 .middle {
-  font-size: 1.2rem;
+  display: flex;
+  font-size: 1.3rem;
   font-family: Montserrat, Helvetica, sans-serif;
 }
 
@@ -132,3 +133,8 @@
 .btn-primary {
   background-color: #0290ff;
 }
+
+/* .percent-div {
+  margin-left: 5rem;
+  margin-bottom: 6rem;
+} */
