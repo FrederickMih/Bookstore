@@ -7,17 +7,17 @@
 }
 
 .percent-div {
-   margin-left: 1rem;
+  margin-left: 1rem;
   margin-top: 1.5rem;
 }
 
 .spanPercent {
-   font-size: 2rem;
-   margin-left: 0.1rem;
+  font-size: 2rem;
+  margin-left: 0.1rem;
 }
+
 .completed-4 {
-   color: gray;
-   
+  color: gray;
 }
 
 .CircularProgressbar .CircularProgressbar-path {
@@ -40,6 +40,7 @@
 .CircularProgressbar .CircularProgressbar-background {
   fill: #d6d6d6;
 }
+
 .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
   fill: #3e98c7;
 }
