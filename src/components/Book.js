@@ -1,17 +1,20 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import { CircularProgress } from '@material-ui/core';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import Comments from './Comments';
 import '../styles/book.css';
 import EditBookForm from '../containers/EditBookForm';
 import '../styles/Comments.css';
+import '../styles/CircularProgress.css';
 
 const Book = ({ book, handleDeleteBook }) => {
   const { title, category } = book;
   const [toggleShow, setToggleShow] = useState(false);
-  const progress = Math.floor(Math.random() * 100);
+  // const progress = Math.floor(Math.random() * 100);
 
   const [toggleComments, setToggleComments] = useState(false);
+
+  const percentage = Math.floor(Math.random() * 100);
 
   const handleCommentsClick = () => {
     setToggleComments(!toggleComments);
@@ -35,16 +38,18 @@ const Book = ({ book, handleDeleteBook }) => {
           </div>
         </div>
         <div className="middle">
-          <CircularProgress variant="determinate" value={progress} />
-          {progress}
-          %
-          <br />
-          {' '}
-          Completed
+          <CircularProgressbar value={percentage} />
+          <div className="percent-div">
+            <span className="spanPercent">
+              {percentage}
+              %
+            </span>
+            <h5 className="completed-4">Completed</h5>
+          </div>
         </div>
         <div className="right">
-          <p className="current right-element">Current Chapter</p>
-          <p className="chapter right-element">Chapter 20</p>
+          <p className="current right-element ">Current Chapter</p>
+          <p className="chapter right-element ">Chapter 20</p>
           <button className="right-element btn btn-primary chapter-btn" type="button">UPDATE PROGRESS</button>
 
         </div>
